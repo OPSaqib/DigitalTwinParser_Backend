@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 public class AttributeDef { //test
-    public string Name { get; set; }
+    public string Name { get; set; } //another test
     public string Type { get; set; }
     public string Description { get; set; }
     public double? Min { get; set; }
