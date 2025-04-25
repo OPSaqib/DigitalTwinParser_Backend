@@ -1,0 +1,39 @@
+{ 
+    "Composition": {
+        "alt_name": "composition of",
+        "description": "A strong ownership relationship where the child cannot exist without the parent.",
+        "cardinality": "1..*",
+        "role": "parent",
+        "inverse_role": "child"
+    },
+    "Specialization": {
+        "alt_name": "specialization of",
+        "description": "A relationship where one class is a specialized version of another. If A specalizes B, then A is a subclass of B.",
+        "cardinality": "1..1",
+        "role": "specalized class",
+        "inverse_role": "generalized class"
+    },
+    "Associations": {
+        "Has": {
+            "alt_name": "has a",
+            "description": "A custom relationship that describes that A has B in a non-compositional manner. E.g., Air has matter state, being gas(eous).",
+            "cardinality": "1..1",
+            "role": "owner",
+            "inverse_role": "owned"
+        },
+        "Input": {
+            "alt_name": "gets input from",
+            "description": "A custom relationship that describes that A gets input from some B.",
+            "cardinality": "1..1",
+            "role": "receiver",
+            "inverse_role": "sender"
+        },
+        "Contains": {
+            "alt_name": "contains one or more",
+            "description": "A association relation, describing that A has/contains instances of B, but is not composed of it.",
+            "cardinality": "1..1",
+            "role": "container",
+            "inverse_role": "contained"
+        }
+    } 
+}

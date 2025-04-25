@@ -1,0 +1,163 @@
+{
+    "Asset": {
+        "description": "A resource that can be reused or extended.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {},
+        "attributes": {
+            "name": "string",
+            "description": "string"
+        }
+    },
+    "Component": {
+        "description": "A specialized asset, that defines a specific object to be modeled virtually. It can be part of a system. It can have 1 or more related models and/or properties. Once defined with 1 or more models, it can be considered a proper asset.",
+        "specializationOf": ["Asset"],
+        "compositionOf": [],
+        "associations": {
+            "has": {
+                "1": {
+                    "name": "Model",
+                    "min": 1,
+                    "max": null
+                },
+                "2": {
+                    "name": "Property",
+                    "min": 0,
+                    "max": null
+                },
+                "3": {
+                    "name": "Concept",
+                    "min": 1,
+                    "max": 1
+                }
+            },
+            "input": {
+                "1": {
+                    "name": "Component",
+                    "min": 0,
+                    "max": null
+                }
+            },
+            "contains": {
+                "1": {
+                    "name": "Component",
+                    "min": 0,
+                    "max": null
+                }
+            }
+        },
+        "attributes": {}
+    },
+    "System": {
+        "description": "A collection of components that work together to achieve a common goal.",
+        "specializationOf": ["Component"],
+        "compositionOf": ["Component"],
+        "associations": {
+            "has": {
+                "1": {
+                    "name": "Composition",
+                    "min": 1,
+                    "max": null
+                }
+            }
+        },
+        "attributes": {}
+    },
+    "Property": {
+        "description": "A possibly shared attribute, that can be used to further define a component. It exists to allow for more flexibility when defining components. It can be used for a wide variety of purposes.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {
+            "has": {
+                "1": {
+                    "name": "Concept",
+                    "min": 1,
+                    "max": 1
+                }
+            }
+        },
+        "attributes": {
+            "name": "string",
+            "description": "string",
+            "valueType": "./ValueTypes.json",
+            "value": "custom"
+        }
+    },
+    "Model": {
+        "description": "A placeholder to represent the relation a component or system can have with a different model. It can be used to define a component's behavior, simulation, and visual properties.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {},
+        "attributes": {
+            "name": "string",
+            "description": "string"
+        }
+    },
+    "Behavior": {
+        "description": "A placeholder to represent the behavior model. It is a specialization of model, and as such inherits all from it.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {},
+        "attributes": {}
+    },
+    "Simulation": {
+        "description": "A placeholder to represent the simulation model. It is a specialization of model, and as such inherits all from it.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {},
+        "attributes": {}
+    },
+    "Visual": {
+        "description": "A placeholder to represent the visual model. It is a specialization of model, and as such inherits all from it. This references visual assets, which can be anything from a 3D model to a 2D image. It is used to represent the component in a visual way in the editor. A system that is a composition of components can have a visual representation as well, which can be a composed visual asset.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {},
+        "attributes": {}
+    },
+    "Concept": {
+        "description": "A concept is a high-level abstraction that can be used to define a component semantics. It is, generally, obtained from an ontology, and can therefore have reference to this ontology. Here its a placeholder, to represent future possibilities of referencing such (external) ontology concepts.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {
+            "has": {
+                "1": {
+                    "name": "Domain Ontology",
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        },
+        "attributes": {
+            "name": "string",
+            "description": "string"
+        }
+    },
+    "Domain Ontology": {
+        "description": "A reference to the version and name of the ontology concepts come from. It is used to provide a class based representation of the actual ontology, since this might not maintain the necessary versioning information. This is also a placeholder, to indicate that concepts can share a common ontology, which might change independently from the metamodel.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {
+            "has": {
+                "1": {
+                    "name": "Concept",
+                    "min": 0,
+                    "max": null
+                }
+            }
+        },
+        "attributes": {
+            "name": "string",
+            "description": "string"
+        }
+    },
+    "Composition": {
+        "description": "A dummy class (placeholder) to represent that a system has some composition description. This is similar to a model.",
+        "specializationOf": [],
+        "compositionOf": [],
+        "associations": {},
+        "attributes": {
+            "name": "string",
+            "description": "string"
+        }
+    }
+}

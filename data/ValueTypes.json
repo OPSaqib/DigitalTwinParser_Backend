@@ -1,0 +1,112 @@
+{
+    "Weight_In_Grams": {
+        "type": "number",
+        "description": "The base unit for weight, representing the weight of the item in grams.",
+        "min": 0,
+        "max": null,
+        "example": 1000
+    },
+    "Color_Code":{
+        "type": "string",
+        "description": "A string representing the color code of the item.",
+        "min": 0,
+        "max": null,
+        "example": "#FFFFFF"
+    },
+    "Useage_State":{
+        "type": "enum",
+        "description": "A value representing the usage state of the item.",
+        "allowed_values": [
+            "on",
+            "off"
+        ],
+        "example": "active"
+    },
+    "Matter_State":{
+        "type": "enum",
+        "description": "A value representing the state of matter of the item.",
+        "allowed_values": [
+            "solid",
+            "liquid",
+            "gas"
+        ],
+        "example": "solid"
+    },
+    "Length_In_Meters": {
+        "type": "number",
+        "description": "The base unit for length, representing the length of the item in meters.",
+        "min": 0,
+        "max": null,
+        "example": 1.5
+    },
+    "Volume_In_Liters": {
+        "type": "number",
+        "description": "The base unit for volume, representing the volume of the item in liters.",
+        "min": 0,
+        "max": null,
+        "example": 2.5
+    },
+    "Temperature_In_Celsius": {
+        "type": "number",
+        "description": "The base unit for temperature, representing the temperature of the item in degrees Celsius.",
+        "min": -273.15,
+        "max": null,
+        "example": 25.0
+    },
+    "Time_In_Seconds": {
+        "type": "number",
+        "description": "The base unit for time, representing the time of the item in seconds.",
+        "min": 0,
+        "max": null,
+        "example": 3600
+    },
+    "Speed_In_Meters_Per_Second": {
+        "type": "number",
+        "description": "The base unit for speed, representing the speed of the item in meters per second.",
+        "min": 0,
+        "max": null,
+        "example": 10.0
+    },
+    "Area_In_Square_Meters": {
+        "type": "number",
+        "description": "The base unit for area, representing the area of the item in square meters.",
+        "min": 0,
+        "max": null,
+        "example": 50.0
+    },
+    "Pressure_In_Pascals": {
+        "type": "number",
+        "description": "The base unit for pressure, representing the pressure of the item in pascals.",
+        "min": 0,
+        "max": null,
+        "example": 101325
+    },
+    "Energy_In_Joules": {
+        "type": "number",
+        "description": "The base unit for energy, representing the energy of the item in joules.",
+        "min": 0,
+        "max": null,
+        "example": 1000
+    },
+    "Density_In_Grams_Per_Cubic_Centimeter": {
+        "type": "number",
+        "description": "The base unit for density, representing the density of the item in grams per cubic centimeter.",
+        "min": 0,
+        "max": null,
+        "example": 1.0
+    },
+    "Volume_In_Cubic_Meters": {
+        "type": "number",
+        "description": "The base unit for volume, representing the volume of the item in cubic meters.",
+        "min": 0,
+        "max": null,
+        "example": 0.001
+    },
+    "Heat_Capacity_In_Joules_Per_Kelvin": {
+        "type": "number",
+        "description": "The base unit for heat capacity, representing the heat capacity of the item in joules per kelvin.",
+        "min": 0,
+        "max": null,
+        "example": 4184
+    }
+}

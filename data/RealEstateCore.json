@@ -1,0 +1,88 @@
+{
+    "Asset": {
+      "description": "An object which is placed inside of a building, but is not an integral part of that building's structure.",
+      "subConcepts": {
+        "Equipment": {
+          "examples": [
+            "HVAC",
+            "Lighting",
+            "SecuritySystem",
+            "FireAlarmSystem",
+            "Elevator",
+            "Escalator",
+            "Generator",
+            "Pump",
+            "Fan",
+            "Boiler",
+            "Chiller",
+            "CoolingTower",
+            "HeatExchanger",
+            "WaterHeater",
+            "AirHandlingUnit",
+            "VAVBox",
+            "CCTV",
+            "AccessControl",
+            "SprinklerSystem",
+            "UPS"
+          ]
+        },
+        "Furniture": {},
+        "ArchitecturalAsset": {}
+      },
+      "relationships": {
+        "isPartOf": "Asset",
+        "hasPart": "Asset",
+        "locatedIn": "Space",
+        "mountedOn": "BuildingElements"
+      }
+    },
+    "BuildingElements": {
+      "description": "A part that constitutes a piece of a building's structural makeup.",
+      "subConcepts": {
+        "Facade": {},
+        "Wall": {},
+        "Slab": {},
+        "RoofInner": {},
+        "Column": {},
+        "Beam": {},
+        "Door": {},
+        "Window": {},
+        "Stair": {},
+        "Ramp": {},
+        "Floor": {},
+        "Ceiling": {}
+      },
+      "relationships": {
+        "hasPart": "BuildingElements",
+        "isPartOf": "BuildingElements",
+        "locatedIn": "Architecture"	
+      }
+    },
+    "Space": {
+      "description": "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces.",
+      "subConcepts": {
+        "Region": {},
+        "Architecture": {
+            "description": "A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc.",
+            "subConcepts": {
+                "Site": {},
+                "Building": {},
+                "Level": {},
+                "Room": {},
+                "Zone": {},
+                "Corridor": {},
+                "Lobby": {},
+                "Parking": {},
+                "Terrace": {},
+                "Balcony": {},
+                "Atrium": {}
+            }
+        }
+      },
+      "relationships": {
+        "hasPart": "Space",
+        "isPartOf": "Space"
+      }
+    }
+  }
+  
