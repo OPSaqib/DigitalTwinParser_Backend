@@ -4,7 +4,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-public class AttributeDef {
+public class AttributeDef { //test
     public string Name { get; set; }
     public string Type { get; set; }
     public string Description { get; set; }
