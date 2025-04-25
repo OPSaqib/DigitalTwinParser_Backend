@@ -34,7 +34,7 @@ public class ClassDef {
 
 public class RelationDef {
     [JsonPropertyName("alt_name")]
-    public string AltName { get; set; }
+    public string AltName { get; set; } //nice
     public string Description { get; set; }
     public string Cardinality { get; set; }
     public string Role { get; set; }
