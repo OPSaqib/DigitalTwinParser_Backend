@@ -2,11 +2,6 @@ using System;
 
 class Program {
     static void Main() {
-        //TEST CRAP DELETE THIS LATER
-        var ballstest = new backEndMain();
-        ballstest.ballsmethod();
-        //GET RID OF THIS TEST GARBAGE LATER
-
         var mm = MetamodelLoader.LoadMetamodel();
         
         Console.WriteLine("=== CLASSES ===");
