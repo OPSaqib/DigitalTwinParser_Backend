@@ -1,9 +1,9 @@
 public class Entity {
-    public string? Description { get; set; }
-    public List<string> SpecializationOf { get; set; }
-    public List<string> CompositionOf { get; set; }
-    public EntityAssociations Associations { get; set; }
-    public EntityAttributes Attributes { get; set; }
+    public string? Description {get; set;}
+    public List<string> SpecializationOf {get; set;}
+    public List<string> CompositionOf {get; set;}
+    public EntityAssociations Associations {get; set;}
+    public EntityAttributes Attributes {get; set;}
 
     public Entity() {
         Description = null;
@@ -15,9 +15,9 @@ public class Entity {
 }
 
 public class EntityAssociations {
-    public Dictionary<string, AssociationItem> Has { get; set; }
-    public Dictionary<string, AssociationItem> Input { get; set; }
-    public Dictionary<string, AssociationItem> Contains { get; set; }
+    public Dictionary<string, AssociationItem> Has {get; set;}
+    public Dictionary<string, AssociationItem> Input {get; set;}
+    public Dictionary<string, AssociationItem> Contains {get; set;}
 
     public EntityAssociations() {
         Has = new Dictionary<string, AssociationItem>();
@@ -27,16 +27,16 @@ public class EntityAssociations {
 }
 
 public class AssociationItem {
-    public string? Name { get; set; }
-    public int? Min { get; set; }
-    public int? Max { get; set; }
+    public string? Name {get; set;}
+    public int? Min {get; set;}
+    public int? Max {get; set;}
 }
 
 public class EntityAttributes {
-    public string? Name { get; set; }
-    public string? Description { get; set; }
-    public string? ValueType { get; set; }
-    public string? Value { get; set; }
+    public string? Name {get; set;}
+    public string? Description {get; set;}
+    public string? ValueType {get; set;}
+    public string? Value {get; set;}
 }
 
 //EXAMPLE OF INSTIATING DIFFERENT OBJECTS FROM THIS CLASSES.JSON FILE:
