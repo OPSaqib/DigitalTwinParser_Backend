@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalTwinParser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+459b4b0af5530e7b118d7a6e8006771369a0a32f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06e9c91d3875443efca933ae564b486bf791f90f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalTwinParser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalTwinParser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

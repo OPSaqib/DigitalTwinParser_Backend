@@ -2,6 +2,8 @@ using System;
 
 class Program {
     static void Main() {
+        //instantiate the list to dynamically store the attributes
+        List<Entity> assets = new List<Entity>();
 
         var mm = MetamodelLoader.LoadMetamodel();
         
