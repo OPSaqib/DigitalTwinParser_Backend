@@ -1,3 +1,4 @@
+// FOR CLASSES.JSON
 public class Entity {
     public string? Description {get; set;}
     public List<string> SpecializationOf {get; set;}
@@ -130,4 +131,214 @@ composition.SpecializationOf.Add("BaseComposition"); // JSON has empty array, ex
 composition.CompositionOf.Add("SubComposition"); // JSON has empty array, example value added
 composition.Attributes.Name = "ExampleComposition";
 composition.Attributes.Description = "Detailed description of the composition";
+*/
+
+
+// FOR Relations.json
+public class Relation {
+    public string? AltName {get; set;}
+    public string? Description {get; set;}
+    public string? Cardinality {get; set;}
+    public string? Role {get; set;}
+    public string? InverseRole {get; set;}
+
+    public Relation() {
+        AltName = null;
+        Description = null;
+        Cardinality = null;
+        Role = null;
+        InverseRole = null;
+    }
+}
+
+//EXAMPLE OF INSTIATING DIFFERENT OBJECTS FROM THIS CLASSES.JSON FILE:
+
+/*
+// Instantiate Composition
+Relation composition = new Relation();
+composition.AltName = "composition of";
+composition.Description = "A strong ownership relationship where the child cannot exist without the parent.";
+composition.Cardinality = "1..*";
+composition.Role = "parent";
+composition.InverseRole = "child";
+
+// Instantiate Specialization
+Relation specialization = new Relation();
+specialization.AltName = "specialization of";
+specialization.Description = "A relationship where one class is a specialized version of another. If A specalizes B, then A is a subclass of B.";
+specialization.Cardinality = "1..1";
+specialization.Role = "specalized class";
+specialization.InverseRole = "generalized class";
+
+// Instantiate Associations.Has
+Relation has = new Relation();
+has.AltName = "has a";
+has.Description = "A custom relationship that describes that A has B in a non-compositional manner. E.g., Air has matter state, being gas(eous).";
+has.Cardinality = "1..1";
+has.Role = "owner";
+has.InverseRole = "owned";
+
+// Instantiate Associations.Input
+Relation input = new Relation();
+input.AltName = "gets input from";
+input.Description = "A custom relationship that describes that A gets input from some B.";
+input.Cardinality = "1..1";
+input.Role = "receiver";
+input.InverseRole = "sender";
+
+// Instantiate Associations.Contains
+Relation contains = new Relation();
+contains.AltName = "contains one or more";
+contains.Description = "A association relation, describing that A has/contains instances of B, but is not composed of it.";
+contains.Cardinality = "1..1";
+contains.Role = "container";
+contains.InverseRole = "contained";
+*/
+
+// FOR ValueTypes.json
+public class ValueType {
+    public string Type {get; set;}
+    public string? Description {get; set;}
+    public double? Min {get; set;}
+    public double? Max {get; set;}
+    public object? Example {get; set;}
+    public List<string> AllowedValues {get; set;}
+
+    public ValueType() {
+        Type = string.Empty;
+        Description = null;
+        Min = null;
+        Max = null;
+        Example = null;
+        AllowedValues = new List<string>();
+    }
+}
+
+//EXAMPLE OF INSTIATING DIFFERENT OBJECTS FROM THIS CLASSES.JSON FILE:
+
+/*
+// Instantiate Weight_In_Grams
+ValueType weightInGrams = new ValueType();
+weightInGrams.Type = "number";
+weightInGrams.Description = "The base unit for weight, representing the weight of the item in grams.";
+weightInGrams.Min = 0;
+weightInGrams.Max = null;
+weightInGrams.Example = 1000;
+
+// Instantiate Color_Code
+ValueType colorCode = new ValueType();
+colorCode.Type = "string";
+colorCode.Description = "A string representing the color code of the item.";
+colorCode.Min = 0;
+colorCode.Max = null;
+colorCode.Example = "#FFFFFF";
+
+// Instantiate Useage_State
+ValueType useageState = new ValueType();
+useageState.Type = "enum";
+useageState.Description = "A value representing the usage state of the item.";
+useageState.Min = 0;
+useageState.Max = null;
+useageState.Example = "active";
+useageState.AllowedValues.Add("on");
+useageState.AllowedValues.Add("off");
+
+// Instantiate Matter_State
+ValueType matterState = new ValueType();
+matterState.Type = "enum";
+matterState.Description = "A value representing the state of matter of the item.";
+matterState.Min = 0;
+matterState.Max = null;
+matterState.Example = "solid";
+matterState.AllowedValues.Add("solid");
+matterState.AllowedValues.Add("liquid");
+matterState.AllowedValues.Add("gas");
+
+// Instantiate Length_In_Meters
+ValueType lengthInMeters = new ValueType();
+lengthInMeters.Type = "number";
+lengthInMeters.Description = "The base unit for length, representing the length of the item in meters.";
+lengthInMeters.Min = 0;
+lengthInMeters.Max = null;
+lengthInMeters.Example = 1.5;
+
+// Instantiate Volume_In_Liters
+ValueType volumeInLiters = new ValueType();
+volumeInLiters.Type = "number";
+volumeInLiters.Description = "The base unit for volume, representing the volume of the item in liters.";
+volumeInLiters.Min = 0;
+volumeInLiters.Max = null;
+volumeInLiters.Example = 2.5;
+
+// Instantiate Temperature_In_Celsius
+ValueType temperatureInCelsius = new ValueType();
+temperatureInCelsius.Type = "number";
+temperatureInCelsius.Description = "The base unit for temperature, representing the temperature of the item in degrees Celsius.";
+temperatureInCelsius.Min = -273.15;
+temperatureInCelsius.Max = null;
+temperatureInCelsius.Example = 25.0;
+
+// Instantiate Time_In_Seconds
+ValueType timeInSeconds = new ValueType();
+timeInSeconds.Type = "number";
+timeInSeconds.Description = "The base unit for time, representing the time of the item in seconds.";
+timeInSeconds.Min = 0;
+timeInSeconds.Max = null;
+timeInSeconds.Example = 3600;
+
+// Instantiate Speed_In_Meters_Per_Second
+ValueType speedInMetersPerSecond = new ValueType();
+speedInMetersPerSecond.Type = "number";
+speedInMetersPerSecond.Description = "The base unit for speed, representing the speed of the item in meters per second.";
+speedInMetersPerSecond.Min = 0;
+speedInMetersPerSecond.Max = null;
+speedInMetersPerSecond.Example = 10.0;
+
+// Instantiate Area_In_Square_Meters
+ValueType areaInSquareMeters = new ValueType();
+areaInSquareMeters.Type = "number";
+areaInSquareMeters.Description = "The base unit for area, representing the area of the item in square meters.";
+areaInSquareMeters.Min = 0;
+areaInSquareMeters.Max = null;
+areaInSquareMeters.Example = 50.0;
+
+// Instantiate Pressure_In_Pascals
+ValueType pressureInPascals = new ValueType();
+pressureInPascals.Type = "number";
+pressureInPascals.Description = "The base unit for pressure, representing the pressure of the item in pascals.";
+pressureInPascals.Min = 0;
+pressureInPascals.Max = null;
+pressureInPascals.Example = 101325;
+
+// Instantiate Energy_In_Joules
+ValueType energyInJoules = new ValueType();
+energyInJoules.Type = "number";
+energyInJoules.Description = "The base unit for energy, representing the energy of the item in joules.";
+energyInJoules.Min = 0;
+energyInJoules.Max = null;
+energyInJoules.Example = 1000;
+
+// Instantiate Density_In_Grams_Per_Cubic_Centimeter
+ValueType densityInGramsPerCubicCentimeter = new ValueType();
+densityInGramsPerCubicCentimeter.Type = "number";
+densityInGramsPerCubicCentimeter.Description = "The base unit for density, representing the density of the item in grams per cubic centimeter.";
+densityInGramsPerCubicCentimeter.Min = 0;
+densityInGramsPerCubicCentimeter.Max = null;
+densityInGramsPerCubicCentimeter.Example = 1.0;
+
+// Instantiate Volume_In_Cubic_Meters
+ValueType volumeInCubicMeters = new ValueType();
+volumeInCubicMeters.Type = "number";
+volumeInCubicMeters.Description = "The base unit for volume, representing the volume of the item in cubic meters.";
+volumeInCubicMeters.Min = 0;
+volumeInCubicMeters.Max = null;
+volumeInCubicMeters.Example = 0.001;
+
+// Instantiate Heat_Capacity_In_Joules_Per_Kelvin
+ValueType heatCapacityInJoulesPerKelvin = new ValueType();
+heatCapacityInJoulesPerKelvin.Type = "number";
+heatCapacityInJoulesPerKelvin.Description = "The base unit for heat capacity, representing the heat capacity of the item in joules per kelvin.";
+heatCapacityInJoulesPerKelvin.Min = 0;
+heatCapacityInJoulesPerKelvin.Max = null;
+heatCapacityInJoulesPerKelvin.Example = 4184;
 */
