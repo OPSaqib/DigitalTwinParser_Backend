@@ -1,7 +1,7 @@
 {
     "Asset": {
         "description": "A resource that can be reused or extended.",
-        "specializationOf": [],
+        "specializationOf": [],  
         "compositionOf": [],
         "associations": {},
         "attributes": {

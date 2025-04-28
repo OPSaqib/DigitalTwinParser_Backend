@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-
 class backEndMain {
     /*
     Method to check if two classes have conflicting association types 
@@ -17,16 +16,17 @@ class backEndMain {
 
 
     /*
-    Method to append attributes to a metamodel
+    Method to associate attributes to each other
     @input = (Metamodel, Metamodel)
+    @output = Metamodel
     */
-    public Metamodel join(Metamodel model, Metamodel attribute) {
+    public Metamodel compose(Metamodel model, Metamodel attribute) {
         //TODO: add code to add attribute to the model 
 
         Metamodel mm_output = new Metamodel();
         return mm_output;
     }
 
-    
+
 
 }
