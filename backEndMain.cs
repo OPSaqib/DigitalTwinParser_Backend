@@ -5,11 +5,28 @@ using System.IO;
 
 class backEndMain {
     /*
-    get rid of this dumbass method later 
+    Method to check if two classes have conflicting association types 
+    @input = (Metamodel, Metamodel) 
+    @output = boolean 
     */
-    public void ballsmethod() {
-        Console.WriteLine("baLLS");
+    public bool checkAssoc(Metamodel mm1, Metamodel mm2) {
+        //TODO:
+        
+        return false;
+    }
+
+
+    /*
+    Method to append attributes to a metamodel
+    @input = (Metamodel, Metamodel)
+    */
+    public Metamodel join(Metamodel model, Metamodel attribute) {
+        //TODO: add code to add attribute to the model 
+
+        Metamodel mm_output = new Metamodel();
+        return mm_output;
     }
 
     
+
 }
