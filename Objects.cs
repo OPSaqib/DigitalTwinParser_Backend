@@ -22,12 +22,12 @@
 //Asset asset = new Asset();
 
 // Set properties
-asset.Description = "A reusable resource example";
-asset.SpecializationOf.Add("BaseAsset");
-asset.CompositionOf.Add("SubComponent1");
-asset.Associations.Add("relatedAsset", "AssetId123");
-asset.Attributes.Name = "ExampleAsset";
-asset.Attributes.Description = "Detailed description of the asset";
+//asset.Description = "A reusable resource example";
+//asset.SpecializationOf.Add("BaseAsset");
+//asset.CompositionOf.Add("SubComponent1");
+//asset.Associations.Add("relatedAsset", "AssetId123");
+//asset.Attributes.Name = "ExampleAsset";
+//asset.Attributes.Description = "Detailed description of the asset";
 
 // (Optional) Print some values
-Console.WriteLine(asset.Attributes.Name); // Outputs: ExampleAsset
+//Console.WriteLine(asset.Attributes.Name); // Outputs: ExampleAsset
