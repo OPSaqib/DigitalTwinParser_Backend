@@ -2,7 +2,7 @@
         public string Description {get; set;}
         public List<string> SpecializationOf {get; set;}
         public List<string> CompositionOf {get; set;}
-        public Dictionary<string, object> Associations {get; set; }
+        public Dictionary<string, object> Associations {get; set;}
         public AssetAttributes Attributes {get; set;}
 
         public Asset() {
