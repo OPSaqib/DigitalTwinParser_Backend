@@ -6,6 +6,7 @@
         public AssetAttributes Attributes {get; set;}
 
         public Asset() {
+          	 Description = string.Empty;
             SpecializationOf = new List<string>();
             CompositionOf = new List<string>();
             Associations = new Dictionary<string, object>();
@@ -14,6 +15,6 @@
     }
 
     public class AssetAttributes {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Name {get; set;}
+        public string Description {get; set;}
     }
