@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sansh\\.nuget\\packages\\": {}
+    "C:\\Users\\opsaq\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\retard_backend\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
+      "projectUniqueName": "C:\\Users\\opsaq\\OneDrive\\TUE\\Work\\Year 3\\Q4\\SEP\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
       "projectName": "DigitalTwinParser",
-      "projectPath": "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\retard_backend\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
-      "packagesPath": "C:\\Users\\sansh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\retard_backend\\DigitalTwinParser_Backend\\obj\\",
+      "projectPath": "C:\\Users\\opsaq\\OneDrive\\TUE\\Work\\Year 3\\Q4\\SEP\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
+      "packagesPath": "C:\\Users\\opsaq\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\opsaq\\OneDrive\\TUE\\Work\\Year 3\\Q4\\SEP\\DigitalTwinParser_Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sansh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\opsaq\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
