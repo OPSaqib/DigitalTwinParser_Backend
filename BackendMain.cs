@@ -32,7 +32,7 @@ class BackendMain {
         parameters[5] = Attribute ValueType
         parameters[6] = Attribute Value
         */
-        
+
         if (parameters.Length > 0) asset.Description = parameters[0];
         if (parameters.Length > 1 && !string.IsNullOrEmpty(parameters[1]))
             asset.SpecializationOf = parameters[1].Split(',').Select(s => s.Trim()).ToList();
@@ -46,3 +46,16 @@ class BackendMain {
         return asset;
     }
 }
+
+/*
+//Example of paramters:
+string[] parameters = new string[] {
+    "Electric Motor",                     // [0] Description
+    "RotatingMachine,Electromechanical", // [1] SpecializationOf (comma-separated)
+    "MotorHousing,DriveShaft",           // [2] CompositionOf (comma-separated)
+    "MotorID",                            // [3] Attribute Name
+    "Unique identifier for the motor",   // [4] Attribute Description
+    "string",                             // [5] Attribute ValueType
+    "EM-12345"                            // [6] Attribute Value
+};
+*/
