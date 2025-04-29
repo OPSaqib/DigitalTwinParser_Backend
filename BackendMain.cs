@@ -24,8 +24,18 @@ class BackendMain {
     private static Asset buildAsset(string[] parameters) {
         //TODO:
         Asset asset = new Asset();
-
+        asset = buildAsset(asset, parameters);
         return asset;
+    }
+
+    /*
+    Description: Method to build an entity object and initialize it with all of the parameters parsed. 
+    fields as desired by the user. 
+    @input: (Asset, string[])
+    @output: Asset 
+    */
+    private Asset buildAsset(string[] parameters) {
+        //TODO
     }
 
     
@@ -73,29 +83,6 @@ class BackendMain {
         "EM-12345"                            // [6] Attribute Value
     };
     */
-
-
-    /*
-    Description: Method to build an entity object and initialize it with all of the parameters parsed. 
-    fields as desired by the user. 
-    @input: (Asset, string[])
-    @output: Asset 
-    */
-    private Relation buildRelation(string[] parameters) {
-        Relation relation = new Relation();
-        
-        if (parameters.Length > 0) entity.Description = parameters[0];
-        if (parameters.Length > 1 && !string.IsNullOrEmpty(parameters[1]))
-            entity.SpecializationOf = parameters[1].Split(',').Select(s => s.Trim()).ToList();
-        if (parameters.Length > 2 && !string.IsNullOrEmpty(parameters[2]))
-            entity.CompositionOf = parameters[2].Split(',').Select(s => s.Trim()).ToList();
-        if (parameters.Length > 3) entity.Attributes.Name = parameters[3];
-        if (parameters.Length > 4) entity.Attributes.Description = parameters[4];
-        if (parameters.Length > 5) entity.Attributes.ValueType = parameters[5];
-        if (parameters.Length > 6) entity.Attributes.Value = parameters[6];
-
-        return entity; 
-    }
 
 }
 
