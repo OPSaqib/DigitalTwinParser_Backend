@@ -345,14 +345,13 @@ heatCapacityInJoulesPerKelvin.Example = 4184;
 
   
 public class Asset {
+    public Entity AssetEntity {get; set;}
+    public Relation AssetRelation {get; set;}
+    public ValueType AssetValue {get; set;}
 
-    Entity assetEntity = new Entity();
-    Relation assetRelation = new Relation();
-    ValueType assetValue = new ValueType();
-    
-    Asset(Entity assetentity, Relation assetrelation, ValueType assetvalue) {
-        assetEntity = assetentity;
-        assetRelation = assetrelation;
-        assetValue = assetvalue; 
+    public Asset(Entity assetEntity, Relation assetRelation, ValueType assetValue) {
+        AssetEntity = assetEntity;
+        AssetRelation = assetRelation;
+        AssetValue = assetValue;
     }
 }
