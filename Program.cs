@@ -2,11 +2,13 @@ using System;
 
 class Program {
     static void Main() {
+    
+        var mm = MetamodelLoader.LoadMetamodel();
         //instantiate the list to dynamically store the attributes
         List<Entity> assets = new List<Entity>();
-
-        var mm = MetamodelLoader.LoadMetamodel();
         
+        
+
         Console.WriteLine("=== CLASSES ===");
         foreach (var (name, cls) in mm.Classes) {
             Console.WriteLine($"\nClass: {name}");

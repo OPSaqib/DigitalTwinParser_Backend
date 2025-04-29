@@ -8,7 +8,7 @@ class BackendMain {
     @output: Entity
     @input: String[]
     */
-    static List<Entity> addAsset(List<Entity> assets, string[] parameters) {
+    public static List<Entity> addAsset(List<Entity> assets, string[] parameters) {
         Entity asset = new Entity();
         asset = buildAsset(asset, parameters);
         assets.Add(asset);
@@ -21,7 +21,7 @@ class BackendMain {
     @input: (Entity, string[])
     @output: Entity 
     */
-    static Entity buildAsset(Entity asset, string[] parameters) {
+    private static Entity buildAsset(Entity asset, string[] parameters) {
         /*
         Assuming parameter mapping like:
         parameters[0] = Description
@@ -45,17 +45,21 @@ class BackendMain {
 
         return asset;
     }
+
+    /*
+    //Example of paramters:
+    string[] parameters = new string[] {
+        "Electric Motor",                     // [0] Description
+        "RotatingMachine,Electromechanical", // [1] SpecializationOf (comma-separated)
+        "MotorHousing,DriveShaft",           // [2] CompositionOf (comma-separated)
+        "MotorID",                            // [3] Attribute Name
+        "Unique identifier for the motor",   // [4] Attribute Description
+        "string",                             // [5] Attribute ValueType
+        "EM-12345"                            // [6] Attribute Value
+    };
+    */
+
+
+
 }
 
-/*
-//Example of paramters:
-string[] parameters = new string[] {
-    "Electric Motor",                     // [0] Description
-    "RotatingMachine,Electromechanical", // [1] SpecializationOf (comma-separated)
-    "MotorHousing,DriveShaft",           // [2] CompositionOf (comma-separated)
-    "MotorID",                            // [3] Attribute Name
-    "Unique identifier for the motor",   // [4] Attribute Description
-    "string",                             // [5] Attribute ValueType
-    "EM-12345"                            // [6] Attribute Value
-};
-*/
