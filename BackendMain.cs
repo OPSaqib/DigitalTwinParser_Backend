@@ -94,8 +94,7 @@ public class BackendMain {
 
         /*
     Example input string array:
-    string[] parameters = new string[]
-    {
+    string[] parameters = new string[] {
         "Electric Motor",                              // [0] Entity.Description
         "RotatingMachine,Electromechanical",           // [1] Entity.SpecializationOf
         "MotorHousing,DriveShaft",                     // [2] Entity.CompositionOf
