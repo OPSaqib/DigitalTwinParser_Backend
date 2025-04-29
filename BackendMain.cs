@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 class BackendMain {
 
     /*
-    Description: Method to instantiate an entity 
-    @output: Entity
+    Description: Method to instantiate an Asset 
+    @output: List<Asset>
     @input: String[]
     */
-    public static List<Entity> addAsset(List<Entity> assets, string[] parameters) {
-        Entity asset = new Entity();
-        asset = buildAsset(asset, parameters);
+    public static List<Asset> addAsset(List<Asset> assets, string[] parameters) {
+        
+        Asset asset = buildAsset(parameters);
         assets.Add(asset);
         return assets;
     }
@@ -18,10 +18,26 @@ class BackendMain {
     /*
     Description: Methood to build an asset, i.e take instantiated asset and populate all it's
     fields as desired by the user. 
-    @input: (Entity, string[])
-    @output: Entity 
+    @input: (Asset, string[])
+    @output: Asset 
     */
-    private static Entity buildAsset(Entity asset, string[] parameters) {
+    private static Asset buildAsset(string[] parameters) {
+        //TODO:
+        Asset asset = new Asset();
+
+        return asset;
+    }
+
+    
+    
+    /*
+    Description: Method to build an entity object and initialize it with all of the parameters parsed. 
+    fields as desired by the user. 
+    @input: (Asset, string[])
+    @output: Asset 
+    */
+    private Entity buildEntity(string[] parameters) {
+        Entity entity = new Entity();
         /*
         Assuming parameter mapping like:
         parameters[0] = Description
@@ -32,18 +48,17 @@ class BackendMain {
         parameters[5] = Attribute ValueType
         parameters[6] = Attribute Value
         */
-
-        if (parameters.Length > 0) asset.Description = parameters[0];
+        if (parameters.Length > 0) entity.Description = parameters[0];
         if (parameters.Length > 1 && !string.IsNullOrEmpty(parameters[1]))
-            asset.SpecializationOf = parameters[1].Split(',').Select(s => s.Trim()).ToList();
+            entity.SpecializationOf = parameters[1].Split(',').Select(s => s.Trim()).ToList();
         if (parameters.Length > 2 && !string.IsNullOrEmpty(parameters[2]))
-            asset.CompositionOf = parameters[2].Split(',').Select(s => s.Trim()).ToList();
-        if (parameters.Length > 3) asset.Attributes.Name = parameters[3];
-        if (parameters.Length > 4) asset.Attributes.Description = parameters[4];
-        if (parameters.Length > 5) asset.Attributes.ValueType = parameters[5];
-        if (parameters.Length > 6) asset.Attributes.Value = parameters[6];
+            entity.CompositionOf = parameters[2].Split(',').Select(s => s.Trim()).ToList();
+        if (parameters.Length > 3) entity.Attributes.Name = parameters[3];
+        if (parameters.Length > 4) entity.Attributes.Description = parameters[4];
+        if (parameters.Length > 5) entity.Attributes.ValueType = parameters[5];
+        if (parameters.Length > 6) entity.Attributes.Value = parameters[6];
 
-        return asset;
+        return entity; 
     }
 
     /*
@@ -60,6 +75,27 @@ class BackendMain {
     */
 
 
+    /*
+    Description: Method to build an entity object and initialize it with all of the parameters parsed. 
+    fields as desired by the user. 
+    @input: (Asset, string[])
+    @output: Asset 
+    */
+    private Relation buildRelation(string[] parameters) {
+        Relation relation = new Relation();
+        
+        if (parameters.Length > 0) entity.Description = parameters[0];
+        if (parameters.Length > 1 && !string.IsNullOrEmpty(parameters[1]))
+            entity.SpecializationOf = parameters[1].Split(',').Select(s => s.Trim()).ToList();
+        if (parameters.Length > 2 && !string.IsNullOrEmpty(parameters[2]))
+            entity.CompositionOf = parameters[2].Split(',').Select(s => s.Trim()).ToList();
+        if (parameters.Length > 3) entity.Attributes.Name = parameters[3];
+        if (parameters.Length > 4) entity.Attributes.Description = parameters[4];
+        if (parameters.Length > 5) entity.Attributes.ValueType = parameters[5];
+        if (parameters.Length > 6) entity.Attributes.Value = parameters[6];
+
+        return entity; 
+    }
 
 }
 

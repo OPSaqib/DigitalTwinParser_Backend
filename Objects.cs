@@ -342,3 +342,17 @@ heatCapacityInJoulesPerKelvin.Min = 0;
 heatCapacityInJoulesPerKelvin.Max = null;
 heatCapacityInJoulesPerKelvin.Example = 4184;
 */
+
+  
+public class Asset {
+
+    Entity assetEntity = new Entity();
+    Relation assetRelation = new Relation();
+    ValueType assetValue = new ValueType();
+    
+    Asset(Entity assetentity, Relation assetrelation, ValueType assetvalue) {
+        assetEntity = assetentity;
+        assetRelation = assetrelation;
+        assetValue = assetvalue; 
+    }
+}

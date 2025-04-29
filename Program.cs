@@ -5,7 +5,7 @@ class Program {
     
         var mm = MetamodelLoader.LoadMetamodel();
         //instantiate the list to dynamically store the attributes
-        List<Entity> assets = new List<Entity>();
+        List<Asset> assets = new List<Asset>();
         
         
 
