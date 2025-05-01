@@ -49,11 +49,19 @@ public class Metamodel {
     public Dictionary<string, JsonElement> RealEstateCore { get; set; }
 }
 
-private static JsonElement jsonSorter() {
-    string path = Path.Combine(Directory.GetCurrentDirectory(),)
-}
+
 
 public static class MetamodelLoader {
+
+    public static string jsonSorter(string unsortedOntology) {
+        string ontologyPath = Path.Combine(Directory.GetCurrentDirectory(), "RealEsatateCore");
+        string jsonString = File.ReadAllText(ontologyPath);
+        using JsonDocument doc = JsonDocument.Parse(jsonString);
+        JsonElement root = doc.RootElement;
+        JsonElement assetElement = root.GetProperty("Asset");
+        return root.ToString();
+    }
+
     public static Metamodel LoadMetamodel() {
         string basePath = Path.Combine(Directory.GetCurrentDirectory(), "data");
 
