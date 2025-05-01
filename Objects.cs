@@ -343,15 +343,90 @@ heatCapacityInJoulesPerKelvin.Max = null;
 heatCapacityInJoulesPerKelvin.Example = 4184;
 */
 
-  
-public class Asset {
-    public Entity AssetEntity {get; set;}
-    public Relation AssetRelation {get; set;}
-    public ValueType AssetValue {get; set;}
+// MAIN MOST IMPORTANT TO LOAD FROM REALESTATECORE
 
-    public Asset(Entity assetEntity, Relation assetRelation, ValueType assetValue) {
-        AssetEntity = assetEntity;
-        AssetRelation = assetRelation;
-        AssetValue = assetValue;
+public class Concept {
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public Dictionary<string, SubConcept> SubConcepts { get; set; }
+    public Dictionary<string, string> Relationships { get; set; }
+
+    public Concept() {
+        SubConcepts = new Dictionary<string, SubConcept>();
+        Relationships = new Dictionary<string, string>();
     }
 }
+
+public class SubConcept {
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public List<string> Examples { get; set; }
+    public Dictionary<string, SubConcept> NestedSubConcepts { get; set; }
+
+    public SubConcept() {
+        Examples = new List<string>();
+        NestedSubConcepts = new Dictionary<string, SubConcept>();
+    }
+}
+
+/*
+    // Instantiate Asset
+    Concept asset = new Concept();
+    asset.Name = "Asset";
+    asset.Description = "An object which is placed inside of a building, but is not an integral part of that building's structure.";
+    SubConcept equipment = new SubConcept();
+    equipment.Name = "Equipment";
+    equipment.Examples.AddRange(new List<string> { "HVAC", "Lighting", "SecuritySystem" });
+    asset.SubConcepts.Add("Equipment", equipment);
+    SubConcept furniture = new SubConcept();
+    furniture.Name = "Furniture";
+    asset.SubConcepts.Add("Furniture", furniture);
+    SubConcept architecturalAsset = new SubConcept();
+    architecturalAsset.Name = "ArchitecturalAsset";
+    asset.SubConcepts.Add("ArchitecturalAsset", architecturalAsset);
+    asset.Relationships.Add("isPartOf", "Asset");
+    asset.Relationships.Add("hasPart", "Asset");
+    asset.Relationships.Add("locatedIn", "Space");
+    asset.Relationships.Add("mountedOn", "BuildingElements");
+
+    // Instantiate BuildingElements
+    Concept buildingElements = new Concept();
+    buildingElements.Name = "BuildingElements";
+    buildingElements.Description = "A part that constitutes a piece of a building's structural makeup.";
+    SubConcept facade = new SubConcept();
+    facade.Name = "Facade";
+    buildingElements.SubConcepts.Add("Facade", facade);
+    SubConcept wall = new SubConcept();
+    wall.Name = "Wall";
+    buildingElements.SubConcepts.Add("Wall", wall);
+    SubConcept slab = new SubConcept();
+    slab.Name = "Slab";
+    buildingElements.SubConcepts.Add("Slab", slab);
+    buildingElements.Relationships.Add("hasPart", "BuildingElements");
+    buildingElements.Relationships.Add("isPartOf", "BuildingElements");
+    buildingElements.Relationships.Add("locatedIn", "Architecture");
+
+    // Instantiate Space
+    Concept space = new Concept();
+    space.Name = "Space";
+    space.Description = "A contiguous part of the physical world that has a 3D spatial extent and that contains or can contain sub-spaces.";
+    SubConcept region = new SubConcept();
+    region.Name = "Region";
+    space.SubConcepts.Add("Region", region);
+    SubConcept architecture = new SubConcept();
+    architecture.Name = "Architecture";
+    architecture.Description = "A designed/landscaped (or potentially designed/landscaped) part of the physical world that has a 3D spatial extent. E.g., a building site, a building, levels within the building, rooms, etc.";
+    SubConcept site = new SubConcept();
+    site.Name = "Site";
+    architecture.NestedSubConcepts.Add("Site", site);
+    SubConcept building = new SubConcept();
+    building.Name = "Building";
+    architecture.NestedSubConcepts.Add("Building", building);
+    SubConcept level = new SubConcept();
+    level.Name = "Level";
+    architecture.NestedSubConcepts.Add("Level", level);
+    space.SubConcepts.Add("Architecture", architecture);
+    space.Relationships.Add("hasPart", "Space");
+    space.Relationships.Add("isPartOf", "Space");
+*/
+
