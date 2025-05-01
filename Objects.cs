@@ -346,10 +346,10 @@ heatCapacityInJoulesPerKelvin.Example = 4184;
 // MAIN MOST IMPORTANT TO LOAD FROM REALESTATECORE
 
 public class Concept {
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public Dictionary<string, SubConcept> SubConcepts { get; set; }
-    public Dictionary<string, string> Relationships { get; set; }
+    public string Name {get; set;}
+    public string Description {get; set;}
+    public Dictionary<string, SubConcept> SubConcepts {get; set;}
+    public Dictionary<string, string> Relationships {get; set;}
 
     public Concept() {
         SubConcepts = new Dictionary<string, SubConcept>();
@@ -358,10 +358,10 @@ public class Concept {
 }
 
 public class SubConcept {
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public List<string> Examples { get; set; }
-    public Dictionary<string, SubConcept> NestedSubConcepts { get; set; }
+    public string Name {get; set;}
+    public string Description {get; set;}
+    public List<string> Examples {get; set;}
+    public Dictionary<string, SubConcept> NestedSubConcepts {get; set;}
 
     public SubConcept() {
         Examples = new List<string>();
