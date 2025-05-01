@@ -49,6 +49,10 @@ public class Metamodel {
     public Dictionary<string, JsonElement> RealEstateCore { get; set; }
 }
 
+private static JsonElement jsonSorter() {
+    string path = Path.Combine(Directory.GetCurrentDirectory(),)
+}
+
 public static class MetamodelLoader {
     public static Metamodel LoadMetamodel() {
         string basePath = Path.Combine(Directory.GetCurrentDirectory(), "data");
