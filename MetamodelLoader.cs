@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 public class AttributeDef { //test
@@ -54,10 +55,13 @@ public class Metamodel {
 public static class MetamodelLoader {
 
     public static string jsonSorter(string unsortedOntology) {
-        string ontologyPath = Path.Combine(Directory.GetCurrentDirectory(), "RealEsatateCore");
+        string ontologyPath = Path.Combine(Directory.GetCurrentDirectory(), "RealEsatateCore"); 
+        //change path code, cannot reference realestatecore as ontology can have a different name
         string jsonString = File.ReadAllText(ontologyPath);
+        string sortedJson = "{}"; // initialize an empty sorted string
         using JsonDocument doc = JsonDocument.Parse(jsonString);
         JsonElement root = doc.RootElement;
+        
         JsonElement assetElement = root.GetProperty("Asset");
         return root.ToString();
     }
