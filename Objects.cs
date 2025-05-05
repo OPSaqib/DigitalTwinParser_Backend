@@ -40,7 +40,7 @@ public class EntityAttributes {
     public string? Value {get; set;}
 }
 
-//EXAMPLE OF INSTIATING DIFFERENT OBJECTS FROM THIS CLASSES.JSON FILE:
+//EXAMPLE OF INSTANTIATING OBJECTS FROM CLASSES.JSON FILE:
 
 /*
 // Instantiate Asset
@@ -151,7 +151,7 @@ public class Relation {
     }
 }
 
-//EXAMPLE OF INSTIATING DIFFERENT OBJECTS FROM THIS CLASSES.JSON FILE:
+//EXAMPLE OF INSTANTIATING OBJECTS FROM RELATIONS.JSON FILE:
 
 /*
 // Instantiate Composition
@@ -214,7 +214,7 @@ public class ValueType {
     }
 }
 
-//EXAMPLE OF INSTIATING DIFFERENT OBJECTS FROM THIS CLASSES.JSON FILE:
+//EXAMPLE OF INSTANTIATING OBJECTS FROM VALUETYPES.JSON FILE:
 
 /*
 // Instantiate Weight_In_Grams
@@ -343,7 +343,7 @@ heatCapacityInJoulesPerKelvin.Max = null;
 heatCapacityInJoulesPerKelvin.Example = 4184;
 */
 
-// MAIN MOST IMPORTANT TO LOAD FROM REALESTATECORE
+//LOAD FROM REALESTATECORE
 
 public class Concept {
     public string Name {get; set;}
@@ -368,6 +368,8 @@ public class SubConcept {
         NestedSubConcepts = new Dictionary<string, SubConcept>();
     }
 }
+
+//EXAMPLE OF INSTANTIATING OBJECTS FROM REALESTATECORE.JSON FILE:
 
 /*
     // Instantiate Asset
