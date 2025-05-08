@@ -62,6 +62,41 @@ public class BackendMain {
         return dict;
     }
 
+    /*
+    Description: Adds a nested subconcept to an existing subconcept in a concept.
+    @input: Dictionary<string, Concept>, string concept_name, string parentSubConcept, string nestedSubConcept
+    @output: Dictionary<string, Concept>
+    */
+    public static Dictionary<string, Concept> addNestedSubConcept(Dictionary<string, Concept> dict, string concept_name, string parentSubConcept, string nestedSubConcept) {
+        if (dict.ContainsKey(concept_name)) {
+            Concept concept = dict[concept_name];
+            if (concept.SubConcepts.ContainsKey(parentSubConcept)) {
+                SubConcept parent = concept.SubConcepts[parentSubConcept];
+                if (!parent.NestedSubConcepts.ContainsKey(nestedSubConcept)) {
+                    SubConcept nested = new SubConcept {
+                        Name = nestedSubConcept
+                    };
+                    parent.NestedSubConcepts[nestedSubConcept] = nested;
+                }
+            }
+        }
+        return dict;
+    }
+
+    /*
+    Description: Adds a relationship to a concept.
+    @input: Dictionary<string, Concept>, string concept_name, string relationshipType, string relatedConcept
+    @output: Dictionary<string, Concept>
+    */
+    public static Dictionary<string, Concept> addRelationship(Dictionary<string, Concept> dict, string concept_name, string relationshipType, string relatedConcept) {
+        if (dict.ContainsKey(concept_name)) {
+            Concept concept = dict[concept_name];
+            concept.Relationships[relationshipType] = relatedConcept;
+        }
+        return dict;
+    }
+
+
 }
 
 
