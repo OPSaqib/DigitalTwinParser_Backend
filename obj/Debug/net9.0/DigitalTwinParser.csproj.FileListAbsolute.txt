@@ -54,3 +54,22 @@ C:\Users\sansh\OneDrive\Desktop\TUe\Year 3\Quarter4\SEP\retard_backend\DigitalTw
 C:\Users\sansh\OneDrive\Desktop\TUe\Year 3\Quarter4\SEP\retard_backend\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.pdb
 C:\Users\sansh\OneDrive\Desktop\TUe\Year 3\Quarter4\SEP\retard_backend\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.genruntimeconfig.cache
 C:\Users\sansh\OneDrive\Desktop\TUe\Year 3\Quarter4\SEP\retard_backend\DigitalTwinParser_Backend\obj\Debug\net9.0\ref\DigitalTwinParser.dll
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\data\Classes.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\data\RealEstateCore.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\data\Relations.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\data\ValueTypes.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\DigitalTwinParser.exe
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\DigitalTwinParser.deps.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\DigitalTwinParser.runtimeconfig.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\DigitalTwinParser.dll
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\bin\Debug\net9.0\DigitalTwinParser.pdb
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.AssemblyInfoInputs.cache
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.AssemblyInfo.cs
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.csproj.CoreCompileInputs.cache
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.sourcelink.json
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.dll
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\refint\DigitalTwinParser.dll
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.pdb
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\DigitalTwinParser.genruntimeconfig.cache
+C:\Users\somea\Source\Repos\DigitalTwinParser_Backend\obj\Debug\net9.0\ref\DigitalTwinParser.dll

@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\Dumbass_retard_backend\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj": {}
+    "C:\\Users\\somea\\Source\\Repos\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\Dumbass_retard_backend\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj": {
+    "C:\\Users\\somea\\Source\\Repos\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\Dumbass_retard_backend\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
+        "projectUniqueName": "C:\\Users\\somea\\Source\\Repos\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
         "projectName": "DigitalTwinParser",
-        "projectPath": "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\Dumbass_retard_backend\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
-        "packagesPath": "C:\\Users\\sansh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sansh\\OneDrive\\Desktop\\TUe\\Year 3\\Quarter4\\SEP\\Dumbass_retard_backend\\DigitalTwinParser_Backend\\obj\\",
+        "projectPath": "C:\\Users\\somea\\Source\\Repos\\DigitalTwinParser_Backend\\DigitalTwinParser.csproj",
+        "packagesPath": "C:\\Users\\somea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\somea\\Source\\Repos\\DigitalTwinParser_Backend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sansh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\somea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
